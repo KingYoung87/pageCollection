@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS DEMO</title>
+</head>
+<body>
+
+<style>
+a {
+  text-decoration: none;
+  color: #333;
+  outline: none;
+}
+a img {
+  border: none;
+}
+html, body  {
+  height: 100%;
+}
+body {
+  font-family: Georgia, serif;
+  background: #F7F7F7;
+}
+.wrapper {
+  width: 100%;
+  max-width: 700px;
+  margin: 50px auto;
+  counter-reset: listLi;
+}
+.wrapper ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+.wrapper ul li {
+  list-style-type: none;
+  margin: 0 0 20px 0;
+  position: relative;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+  font-size: 15px;
+  border-radius: 3px;
+  overflow: hidden;
+  color: #333;
+  transition: all 0.2s;
+  background: #FFF;
+  transform: translateZ(0);
+  will-change: inherit;
+  counter-increment: listLi;
+}
+.wrapper ul li::after {
+  list-style-type: none;
+  margin: 0;
+  content: counter(listLi);
+  position: absolute;
+  right: 18px;
+  top: -1px;
+  background: #6CBCCA;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.8), 0px 1px 0px rgba(0, 0, 0, 0.3);
+  color: #FFF;
+  font-size: 19px;
+  padding: 3px 6px;
+  transition: background 0.3s;
+}
+.wrapper ul li:hover {
+  list-style-type: none;
+  transition: all 0.2s;
+  transform: scale(1.05);
+}
+.wrapper ul li:hover::after {
+  background: #5595A0;
+  transition: background 0.3s;
+}
+.wrapper ul li img {
+  float: left;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  line-height: 150px;
+  text-shadow: 1px 1px 1px #CCC;
+}
+.wrapper ul li div {
+  padding: 20px 20px 10px 170px;
+}
+.wrapper ul li div h2 {
+  margin-top: 0;
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+.wrapper ul li div p {
+  margin: 0;
+  font-weight: lighter;
+  line-height: 30px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.title h1 {
+  line-height: 50px;
+  margin: 0;
+}
+.title p {
+  margin: 15px 0;
+}
+.title .info {
+  margin: 15px 0;
+}
+.title .btn {
+  display: inline-block;
+  background-color: #6CBCCA;
+  color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px 24px;
+  border-radius: 4px;
+  margin: 10px;
+  transition: all 0.3s;
+}
+.title .btn:hover {
+  background-color: #5595A0;
+  transition: all 0.3s;
+}
+</style>
+
+<div class="wrapper">
+  <div class="title">
+    <h1>页面示例</h1>
+    <p>效果还不错，先写下来，以后利用下，简约风格，不失设计</p>
+    <p class="info"><a href="https://github.com/barretlee" target="_blank" class="btn">踩点小胡子哥的github</a> or <a href="http://barretlee.com/rss2.xml" target="_blank" class="btn">订阅小胡子哥的博客</a></p>
+  </div>
+  <ul>
+    <li>
+      <a href="http://zhangmengxue.com" target="_blank">
+        <img src="http://barretlee.com/skylar.jpg" alt="张梦雪">
+        <div>
+          <h2>大额大额傻傻等天亮</h2>
+          <p>傻大额，大额，大额，大额头，额头大，啊哈哈，waiting for sunrise.</p>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="http://barretlee.com" target="_blank">
+        <img src="http://barretlee.com/avatar.png" alt="小胡子哥">
+        <div>
+          <h2>小胡子哥的个人博客</h2>
+          <p>分享生活，分享技术，小胡子哥带你走进大前端！读书、上网、旅行、睡觉、烧菜、懒，样样在行！</p>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="http://zhangmengxue.com" target="_blank">
+        <img src="http://barretlee.com/skylar.jpg" alt="张梦雪">
+        <div>
+          <h2>大额大额傻傻等天亮</h2>
+          <p>傻大额，大额，大额，大额头，额头大，啊哈哈，waiting for sunrise.</p>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="http://barretlee.com" target="_blank">
+        <img src="http://barretlee.com/avatar.png" alt="小胡子哥">
+        <div>
+          <h2>小胡子哥的个人博客</h2>
+          <p>分享生活，分享技术，小胡子哥带你走进大前端！读书、上网、旅行、睡觉、烧菜、懒，样样在行！</p>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+
+</body>
+</html>
